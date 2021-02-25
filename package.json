@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Ranjokan/pico-placa-predictor#readme",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "js-datepicker": "^5.18.0"
   }
 }
