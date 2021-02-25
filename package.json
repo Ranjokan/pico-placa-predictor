@@ -1,0 +1,19 @@
+{
+  "name": "pico-placa-predictor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ranjokan/pico-placa-predictor.git"
+  },
+  "author": "Jacinto Palma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ranjokan/pico-placa-predictor/issues"
+  },
+  "homepage": "https://github.com/Ranjokan/pico-placa-predictor#readme"
+}
