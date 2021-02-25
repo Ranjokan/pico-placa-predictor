@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ranjokan/pico-placa-predictor/issues"
   },
-  "homepage": "https://github.com/Ranjokan/pico-placa-predictor#readme"
+  "homepage": "https://github.com/Ranjokan/pico-placa-predictor#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
