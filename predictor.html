@@ -13,6 +13,45 @@
 </head>
 <body>
     
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <div class="col-8 align-self-center">
+                <h2 style="color: whitesmoke;">"Pico y Placa" predictor</h2>
+            </div>            
+        </div>
+    </nav>
+
+    <div class="row row-content2">
+        <div class="col-12 col-sm-10 offset-sm-1">
+            <h2>Instructions</h2>
+            <p>1. Input yout License Plate with the following format <em>(XXX-####)</em> 3 letters and 4 numbers.
+            <br>2. Select a date from the calendar.
+            <br>3. Select a time.
+            </p>
+        </div>
+    </div>
+
+    <div class="row row-content2">
+        <div class="col-12 col-md-8 offset-md-2">
+            <form>
+                <div class="form-group row">
+                    <label for="licensePlate" class="col-md-2 col-form-label">License Plate</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="plateLetters" name="plateLetters"
+                            placeholder="XXX">
+                        </div>
+                        <span>-</span>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="plateNumbers" name="plateNumbers"
+                            placeholder="####">
+                        </div>
+                </div>
+                <div class="form-group row">
+                    <label for="licensePlate" class="col-md-2 col-form-label">Date</label> 
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!--JQuery and Bootstrap cdn's-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
