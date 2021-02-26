@@ -24,18 +24,36 @@
     </nav>
 
 
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="responseModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
+                    <h4 class="modal-title">Prediction</h4>
                     <button type="button" class="close" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div>
-                        <span></span>
+                    <h4>The car with the following information:</h4>
+                    <div class="row">                    
+                        <label class="col-md-2">License Plate</label> 
+                        <div class="col-md-4">
+                            <span id='outLicensePlate'></span>
+                        </div>                        
                     </div>
+                    <div class="row">
+                        <label class="col-md-2">Date</label> 
+                        <div class="col-md-4">
+                            <span id='outDate'></span>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <label class="col-md-2">Time</label> 
+                        <div class="col-md-4">
+                            <span id='outTime'></span>
+                        </div> 
+                    </div>
+                    <span id='output'></span>
                 </div>
             </div>
         </div>
@@ -110,7 +128,8 @@
                         </div>
                         <div class="form-group row">
                             <div class="offset-md-2 col-md-10">
-                                <button type="button" class="btn btn-primary" onclick="prediction()">Visualize</button>
+                                <button type="button" class="btn btn-primary" onclick="prediction()"><a data-toggle="modal" data-target="#responseModal">
+                                Visualize</a></button>
                             </div>
                         </div>
                     </form>
