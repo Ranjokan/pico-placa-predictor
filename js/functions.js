@@ -10,7 +10,9 @@ function prediction(){
     let letters = document.getElementById('plateLetters').value
     let numbers = document.getElementById('plateNumbers').value
     let date = document.getElementById('datepicker').value
-    console.log(date)
+    let time = document.getElementById('timepicker').value
+    
+    console.log(time)
     letters = letters.toUpperCase();
 
     if (isNaN(letters)){
