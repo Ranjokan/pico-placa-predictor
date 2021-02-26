@@ -20,27 +20,21 @@ function prediction(){
     
     }
     console.log('License Plate:' +licensePlate)
-    
-   
-
+       
 }
 
-
 //Call the datepicker from the form
-const datefield = document.getElementById('datepicker')
+let datefield = document.getElementById('datepicker')
 
-const picker = datepicker(datefield, {
+let picker = datepicker(datefield, {
 
     formatter: (input, date, instance) => {
-    
+
     input.value = date.toDateString()
     selection = input.value
-    console.log("This is the selected date......" + input.value)
-  },
-  
-  
+    console.log('SELECTED DATE: '+ selection)   
+},  
+
 })
-
-
-
+  
 
