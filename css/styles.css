@@ -1,0 +1,28 @@
+.body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+
+.row-content{
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+.row-content2{
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+a:link, a:visited {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  

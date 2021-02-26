@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="node_modules/js-datepicker/dist/datepicker.min.css">
+    
+
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <div class="col-8 align-self-center">
+                <h2 style="color: whitesmoke;">"Pico y Placa" predictor</h2>
+            </div>            
+        </div>
+    </nav>
+
+    <div class="row row-content2">
+        <div class="col-12 col-sm-10 offset-sm-1">
+            <h2>Instructions</h2>
+            <p>1. Input yout License Plate with the following format <em>(XXX-####)</em> 3 letters and 4 numbers.
+            <br>2. Select a date from the calendar.
+            <br>3. Select a time.
+            </p>
+        </div>
+    </div>
+
+    <div class="row row-content2">
+        <div class="col-12 col-md-8 offset-md-2">
+            <form>
+                <div class="form-group row">
+                    <label for="licensePlate" class="col-md-2 col-form-label">License Plate</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="plateLetters" name="plateLetters" 
+                            maxlength="3" placeholder="XXX" required="required" />
+                        </div>
+                        <span>-</span>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="plateNumbers" name="plateNumbers"
+                            maxlength="4" placeholder="####" required="required"/>
+                        </div>
+                </div>
+                <div class="form-group row">
+                    <label for="date" class="col-md-2 col-form-label">Date</label> 
+                    <div class="col-md-4">
+                        <input type="text" class="date-picker" id="datepicker" required="required"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="time" class="col-md-2 col-form-label">Time</label> 
+                    <div class="col-md-4">
+                        <select id="timepicker" name="time">
+                            <option value="7:00">7:00</option>
+                            <option value="7:30">7:30</option>
+                            <option value="8:00">8:00</option>
+                            <option value="8:30">8:30</option>
+                            <option value="9:00">9:00</option>
+                            <option value="9:30">9:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                            <option value="18:30">18:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-md-2 col-md-10">
+                        <button type="button" class="btn btn-primary" onclick="prediction()">Visualize</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--JQuery and Bootstrap cdn's-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="node_modules/js-datepicker/dist/datepicker.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+
+    
+    
+
+    
+</body>
+</html>
