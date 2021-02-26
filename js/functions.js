@@ -1,8 +1,16 @@
+//Call the datepicker from the form
+let datefield = document.getElementById('datepicker')
+const picker = datepicker(datefield)
+
+
+
+
 function prediction(){
     //Gets the license plate data
     let letters = document.getElementById('plateLetters').value
     let numbers = document.getElementById('plateNumbers').value
-    
+    let date = document.getElementById('datepicker').value
+    console.log(date)
     letters = letters.toUpperCase();
 
     if (isNaN(letters)){
@@ -22,19 +30,3 @@ function prediction(){
     console.log('License Plate:' +licensePlate)
        
 }
-
-//Call the datepicker from the form
-let datefield = document.getElementById('datepicker')
-
-let picker = datepicker(datefield, {
-
-    formatter: (input, date, instance) => {
-
-    input.value = date.toDateString()
-    selection = input.value
-    console.log('SELECTED DATE: '+ selection)   
-},  
-
-})
-  
-
