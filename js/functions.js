@@ -12,7 +12,7 @@ function prediction(){
     let date = document.getElementById('datepicker').value
     let time = document.getElementById('timepicker').value
     
-    console.log(time)
+    console.log(time + date)
     letters = letters.toUpperCase();
 
     if (isNaN(letters)){
