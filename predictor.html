@@ -23,6 +23,47 @@
         </div>
     </nav>
 
+
+    <div id="responseModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Pico y Placa</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>The car with the following information:</h4>
+                    <div class="row">                    
+                        <label class="col-md-2">License Plate</label> 
+                        <div class="col-md-4">
+                            <span id='outLicensePlate'></span>
+                        </div>                        
+                    </div>
+                    <div class="row">
+                        <label class="col-md-2">Date</label> 
+                        <div class="col-md-4">
+                            <span id='outDate'></span>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <label class="col-md-2">Time</label> 
+                        <div class="col-md-4">
+                            <span id='outTime'></span>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <h5 id='output'></h5>
+                        </div> 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="row row-content2">
         <div class="col-12 col-sm-10 offset-sm-1">
             <h2>Instructions</h2>
@@ -35,65 +76,71 @@
 
     <div class="row row-content2">
         <div class="col-12 col-md-8 offset-md-2">
-            <form>
-                <div class="form-group row">
-                    <label for="licensePlate" class="col-md-2 col-form-label">License Plate</label>
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" id="plateLetters" name="plateLetters" 
-                            maxlength="3" placeholder="XXX" required="required" />
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="licensePlate" class="col-md-2 col-form-label">License Plate</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="plateLetters" name="plateLetters" 
+                                    maxlength="3" placeholder="XXX" required="required" />
+                                </div>
+                                <span>-</span>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="plateNumbers" name="plateNumbers"
+                                    maxlength="4" placeholder="####" required="required"/>
+                                </div>
                         </div>
-                        <span>-</span>
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" id="plateNumbers" name="plateNumbers"
-                            maxlength="4" placeholder="####" required="required"/>
+                        <div class="form-group row">
+                            <label for="date" class="col-md-2 col-form-label">Date</label> 
+                            <div class="col-md-4">
+                                <input type="text" class="date-picker" id="datepicker" required="required"/>
+                            </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="time" class="col-md-2 col-form-label">Time</label> 
+                            <div class="col-md-4">
+                                <select id="timepicker" name="time">
+                                    <option value="7:00">7:00</option>
+                                    <option value="7:30">7:30</option>
+                                    <option value="8:00">8:00</option>
+                                    <option value="8:30">8:30</option>
+                                    <option value="9:00">9:00</option>
+                                    <option value="9:30">9:30</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:30">10:30</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="11:30">11:30</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="14:30">14:30</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="15:30">15:30</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="16:30">16:30</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="17:30">17:30</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="18:30">18:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+        
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="button" class="btn btn-primary" onclick="prediction()"><a data-toggle="modal" data-target="#responseModal">
+                                Visualize</a></button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group row">
-                    <label for="date" class="col-md-2 col-form-label">Date</label> 
-                    <div class="col-md-4">
-                        <input type="text" class="date-picker" id="datepicker" required="required"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="time" class="col-md-2 col-form-label">Time</label> 
-                    <div class="col-md-4">
-                        <select id="timepicker" name="time">
-                            <option value="7:00">7:00</option>
-                            <option value="7:30">7:30</option>
-                            <option value="8:00">8:00</option>
-                            <option value="8:30">8:30</option>
-                            <option value="9:00">9:00</option>
-                            <option value="9:30">9:30</option>
-                            <option value="10:00">10:00</option>
-                            <option value="10:30">10:30</option>
-                            <option value="11:00">11:00</option>
-                            <option value="11:30">11:30</option>
-                            <option value="12:00">12:00</option>
-                            <option value="12:30">12:30</option>
-                            <option value="13:00">13:00</option>
-                            <option value="13:30">13:30</option>
-                            <option value="14:00">14:00</option>
-                            <option value="14:30">14:30</option>
-                            <option value="15:00">15:00</option>
-                            <option value="15:30">15:30</option>
-                            <option value="16:00">16:00</option>
-                            <option value="16:30">16:30</option>
-                            <option value="17:00">17:00</option>
-                            <option value="17:30">17:30</option>
-                            <option value="18:00">18:00</option>
-                            <option value="18:30">18:30</option>
-                            <option value="19:00">19:00</option>
-                            <option value="19:30">19:30</option>
-
-                          </select>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="offset-md-2 col-md-10">
-                        <button type="button" class="btn btn-primary" onclick="prediction()">Visualize</button>
-                    </div>
-                </div>
-            </form>
+            </div>
+            
         </div>
     </div>
 
