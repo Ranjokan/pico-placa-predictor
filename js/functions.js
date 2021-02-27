@@ -102,6 +102,36 @@ function prediction(){
                 fillData(licensePlate,date,time,output)
             }
             break;
+            case 'Fry':
+                if((lastdigit==9 || lastdigit==0)&& (time=='7:00'||time=='7:30'||time=='8:00'||time=='8:30'||time=='9:00'||time=='9:30'||time=='16:00'||time=='16:30'
+                || time=='17:00'||time=='17:30'||time=='18:00'||time=='18:30'||time=='19:00'||time=='19:30')){
+                    console.log('Your car with plates: '+ licensePlate + 'cannot circulate at '+ time)
+                    output = 'Your car cannot circulate at this date and time'
+                    fillData(licensePlate,date,time,output)
+                }else if(0>lastdigit<9){
+                    console.log('Your car with plates: '+ licensePlate + 'can circulate at '+ time)
+                    output = 'Your car can circulate at this date and time'
+                    fillData(licensePlate,date,time,output)
+                }else{
+                    console.log('Your car with plates: '+ licensePlate + 'can circulate at '+ time)
+                    output = 'Your car with plates: '+ licensePlate + 'can circulate at '+ time
+                    output = 'Your car can circulate at this date and time'
+                    fillData(licensePlate,date,time,output)
+                }
+            break;
+            case 'Sat':
+                    console.log('Your car with plates: '+ licensePlate + 'can circulate at '+ time)
+                    output = 'Your car with plates: '+ licensePlate + 'can circulate at '+ time
+                    output = 'Your car can circulate at this date and time'
+                    fillData(licensePlate,date,time,output)
+            break;
+            case 'Sun':
+                    console.log('Your car with plates: '+ licensePlate + 'can circulate at '+ time)
+                    output = 'Your car with plates: '+ licensePlate + 'can circulate at '+ time
+                    output = 'Your car can circulate at this date and time'
+                    fillData(licensePlate,date,time,output)
+            break;
+
                  
 
     }
