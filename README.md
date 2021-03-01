@@ -9,4 +9,4 @@ https://www.npmjs.com/package/js-datepicker
 
 To run the code just use the following command in the terminal.
 
-`npm run start`
+`npm start`
